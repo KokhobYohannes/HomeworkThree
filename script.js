@@ -16,8 +16,6 @@ var lettersUppercaseSelected = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"
 
 var symbolsSelected = ["@", "!", "#", "$", "%", "<", "^", "&", "*", ">"];
 
-var errorMessage = [];
-
 var finalPassword = [];
 var userPassword = "";
 
@@ -28,10 +26,6 @@ var userPassword = "";
 
 function generatePassword() {
     var passwordLength = prompt("Enter a number between 8 and 128 for your desired password length.");
-    if (password.value.length < 8){
-        alert = ("Please enter a number larger than 8.");
-        return false;
-      }
 
     var numbers = confirm("Would you like numbers in your password?");
     if (numbers) {
@@ -80,7 +74,6 @@ function generatePassword() {
     var passwordText = document.querySelector("#password");
 
     passwordText.textContent = userPassword;
-}
 }
 
 // Write password to the #password input
